@@ -10,7 +10,9 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+#读取"d:/微信test.txt"该地址下的txt文档，同时不读取文档的抬头
 wechatlist=pd.read_csv("d:/微信test.txt",header=None)
+#把位置为在最左的字串更换为list数据格式
 wechatlist=wechatlist[0].tolist()
 
 
@@ -19,7 +21,7 @@ chrome_options = webdriver.ChromeOptions()
 
 chrome_options.add_argument('--window-size=400,600')
 
-
+#创建两个变量
 name=[]
 biz=[]
 
